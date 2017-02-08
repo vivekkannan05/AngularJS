@@ -1,0 +1,14 @@
+<html ng-app="moredirectives">
+    <head>
+        <script src="angular.js"></script>
+        <script src ="moredirectives.js"></script>
+    </head>
+    <body>
+        <h1>More Directives OPtion</h1>  
+        
+      <div ng-controller="moreDirectives as ctrl">
+          <input type="checkbox" ng-model="ctrl.checked"></input>
+          <p ng-if="ctrl.checked">HIDE / SHOW CPNTENT</p> 
+      </div> 
+    </body>
+</html>

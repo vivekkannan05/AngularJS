@@ -1,0 +1,25 @@
+<html ng-app ="myApp">
+<header>
+<script src ="angular.js"></script>  
+
+</header>
+<body ng-init="hourofDay=15">
+<div ng-controller="hourCtrl">
+<h1>Hello World</h1>
+<p ng-if="hourofDay <12">Good Morning</p>
+<p ng-if="hourofDay>12">Good Evening</p>
+<p> The hour of the day is<span ng-bind="hourofDay"></span></p>
+--alternte way
+<p> The hour of the alternately {{hourofDay}}</p>
+</div>
+<script>
+var module = angular.module("myApp",[]);
+module.controller("hourCtrl",defaultHour);
+function defaultHour($scope){
+    console.log("defaultHour called")
+    $scope.hourofDay = 15
+}
+
+</script>
+</body>
+</html>

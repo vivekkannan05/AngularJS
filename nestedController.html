@@ -1,0 +1,15 @@
+<html ng-app="nestedController">
+    <header>
+  <script src ="angular.js"></script>
+  <script src ="nestedController.js"></script>
+   </header>
+    <body>
+        <h1>NestedControllers Examples  AND ITS SYNTAX (ALIAS)</h1>
+     <div ng-controller="ctrl1 as c1">
+         <p ng-bind="c1.var1" />
+             <div ng-controller="ctrl2 as c2">
+         {{c2.var1}}
+         </div>
+     </div>
+      </body>
+</html>
