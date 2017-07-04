@@ -1,0 +1,16 @@
+<html ng-app ="loopingApp">
+    <header>
+    <script src = 'angular.js'></script>
+    <script src = 'LoopingApp.js'></script>
+    </header>
+    <body>
+        <h1>Looping Example</h1>
+        <div ng-controller="loopCtrl as ctrl">
+            <div ng-repeat="i in ctrl.myList">
+            <p>{{$index}}     {{i.name}}      {{i.age}}</p>
+            <p>First {{$first}}      Middle {{$middle}}        Last {{$last}}   </p>
+            <p>Even {{$even}}         Odd {{$odd}}</p>
+            </div>
+        </div>
+    </body>
+</html>

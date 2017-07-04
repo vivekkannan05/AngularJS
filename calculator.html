@@ -1,0 +1,24 @@
+<html ng-app = "calculatorApp">
+    <header>
+        <script src ="angular.js"></script>
+        <script src = "calc.js"></script>
+    </header>
+    <body>
+        <h1>Calculator App</h1>
+        <div ng-controller="ctrl">
+       <p> Enter the 1st value <input type="number" ng-model="num1" ng-change="calculate()"/></p>
+       <p> Enter the 2nd Value <input type="number" ng-model="num2" ng-change="calculate()"/></p>
+        
+        <p> Choose an operation
+          <input type="radio" ng-model="operator" value="+" ng-click="calculate()">+</input>
+          <input type="radio" ng-model="operator" value="-" ng-click="calculate()">-</input>
+          <input type="radio" ng-model="operator" value="*" ng-click="calculate()">*</input>
+          <input type="radio" ng-model="operator" value="/" ng-click="calculate()">/</input>
+         </p>  
+<p>
+    The result is {{resultVal}}
+</p>
+
+    </div>
+    </body>
+</html>

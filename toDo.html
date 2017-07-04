@@ -1,0 +1,30 @@
+<html ng-app="toDoApp">
+    <header>
+        <script src='angular.js'> </script>
+        <script src='toDo.js'> </script>
+    </header>
+    <body>
+        <h1>TO DO App</h1>
+        <div ng-controller="toDoCtrl as ctrl">
+
+        <div>
+            <!--ng model is used to bind the value.--> 
+            <input type="text" ng-model="ctrl.toDoInput" placeholder="enter your text here">
+       <button ng-click="ctrl.add()">Add</button>
+        </div>
+        <hr>
+        <!--p ng-if=!ctrl.edited -->
+        <div>
+            <button ng-hide ="ctrl.editFlag" ng-click="ctrl.editToDoList()">Edit</button>
+            <button ng-show ="ctrl.editFlag" ng-click="ctrl.doneEdit()">Save</button>
+          <ul style="list-style-type:none">  
+        <li ng-repeat="item in ctrl.todoList">
+            <input type="text" ng-show ="ctrl.editFlag" ng-model="item"></input>
+            <input type ="checkbox" ng-click="ctrl.deleteToDo(item)" ng-hide="ctrl.editFlag"><span ng-hide="ctrl.editFlag" ng-bind="item"/></input>
+            
+            </li>
+          </ul>
+          </div>    
+        </div>
+    </body>
+</html>

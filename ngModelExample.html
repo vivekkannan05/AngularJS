@@ -1,0 +1,28 @@
+<html ng-app="ngModelExamples">
+    <header>
+  <script src ="angular.js"></script>
+  <script src ="ngModelApp.js"></script>
+   </header>    
+    <body>
+        <h1>Different options with NG-MODEL</h1>
+        <div ng-controller="ExampleCtrl">
+    <p>Text  <input type ="text" ng-change="texboxChange()" ng-model="inputText"/> </p>
+    <p> Check Box<input type="checkbox" ng-model="booleanCheck"/></p>
+      <p>Date <input type="date" ng-model="dateValue" /></p>
+      <p>Radio Button
+          <input type="radio" ng-model="radioValue" value="OPTION1">OPTION1</input>
+          <input type="radio" ng-model="radioValue" value="OPTION2">OPTION2</input>
+          <input type="radio" ng-model="radioValue" value="OPTION3">OPTION3</input>
+          </p>
+      <br>
+        input text is {{inputText}}
+        <br>
+        boolean for check box is {{booleanCheck}}
+        <br>
+        the Radio OPtion Choosen is {{radioValue}}
+        <br>
+        Date is {{dateValue}}
+        </div>
+      
+      </body>
+</html>
